@@ -18,6 +18,12 @@ We have a copy of the jar built by this project on the 2.2.6-filethis-1.0.0 bran
 </dependency>
 ```
 
+The jar file used comes from:
+
+```
+build/libs/json-schema-validator-2.2.6.jar
+```
+
 Note that we needed to add the following dependencies:
 
 ```
