@@ -34,6 +34,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Deque;
+import java.util.ArrayDeque;
 
 /**
  * Class to keep track of instance pointer/schema pairs during validation
@@ -67,7 +68,8 @@ final class ValidationStack
     /*
      * Queue of visited contexts
      */
-    private final Deque<Element> validationQueue = Queues.newArrayDeque();
+     private final Deque<Element> validationQueue = new ArrayDeque<Element>();
+//     private final Deque<Element> validationQueue = Queues.newArrayDeque();
 
     /*
      * Head error message when a validation loop is detected
@@ -121,7 +123,8 @@ final class ValidationStack
 
         validationQueue.addLast(new Element(pointer, schemaURIs));
         pointer = ptr;
-        schemaURIs = Queues.newArrayDeque();
+        schemaURIs = new ArrayDeque<SchemaURI>();
+//        schemaURIs = Queues.newArrayDeque();
         schemaURIs.addLast(schemaURI);
     }
 

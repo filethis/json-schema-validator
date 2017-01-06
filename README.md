@@ -1,3 +1,46 @@
+## FileThis
+
+We had to fork this project so that we could make a two-line change to avoid a runtime error. Their code
+was so out of date that we had dependency problems. We made our changes off of their last stable release
+which they tagged "2.2.6", instead of branching off of their master, which seems risky. Our branch is
+called "2.2.6-filethis-1.0.0". Should we need to make further changes, please increment the second
+version number.
+
+The changes are on lines 71 and 126 of the ValidationStack.java file.
+
+We have a copy of the jar built by this project on the 2.2.6-filethis-1.0.0 branch in our Nexus repository as:
+
+```
+<dependency>
+    <groupId>com.filethis</groupId>
+    <artifactId>json-schema-validator</artifactId>
+    <version>2.2.6</version>
+</dependency>
+```
+
+Note that we needed to add the following dependencies:
+
+```
+<dependency>
+    <groupId>com.github.fge</groupId>
+    <artifactId>json-schema-core</artifactId>
+    <version>1.2.5</version>
+</dependency>
+
+<dependency>
+    <groupId>com.googlecode.libphonenumber</groupId>
+    <artifactId>libphonenumber</artifactId>
+    <version>8.0.0</version>
+</dependency>
+
+<dependency>
+    <groupId>net.sf.jopt-simple</groupId>
+    <artifactId>jopt-simple</artifactId>
+    <version>5.0.3</version>
+</dependency>
+```
+
+
 ## Read me first
 
 The **current** version of this project is licensed under both LGPLv3 (or later) and ASL 2.0. The old version
@@ -98,4 +141,3 @@ For a detailed discussion of the implementation, see
 
 Please see the [wiki](https://github.com/fge/json-schema-validator/wiki/) for more
 details.
-
