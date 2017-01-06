@@ -1,3 +1,9 @@
+## FileThis
+
+We use a branch named: 2.2.6-filethis-1.0.0
+
+See: https://github.com/filethis/json-schema-validator/blob/2.2.6-filethis-1.0.0/README.md
+
 ## Read me first
 
 This project, as of version 2.1.8, is licensed under both LGPLv3 and ASL 2.0.
